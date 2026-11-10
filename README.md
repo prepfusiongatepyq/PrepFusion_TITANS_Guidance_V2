@@ -34,7 +34,7 @@ Find this block:
 
 **Action:**
 1. Save your logo as `logo.png` (or `.jpg` / `.pdf`)
-2. Upload it to **Overleaf in the same folder** as `prepfusion_titans_guide.tex`
+2. Put it in **the same folder** as `prepfusion_titans_guide.tex`
 3. **Uncomment** the line: remove the `%` at the start
 4. Adjust `width=3.2cm` if needed (smaller for compact logo, larger for prominence)
 
@@ -90,7 +90,7 @@ Find the watermark block (lines ~75–88):
 
 ```
 prepfusion_titans_guide.tex    ← Single master .tex file (ready to compile)
-logo.png                        ← Your brand logo (upload to Overleaf)
+logo.png                        ← Your brand logo
 README.md                       ← This file
 ```
 
@@ -100,16 +100,7 @@ README.md                       ← This file
 
 ## 🔧 Compilation
 
-### On Overleaf (Recommended)
-
-1. Create a **new blank project** on [Overleaf](https://overleaf.com)
-2. Copy the contents of `prepfusion_titans_guide.tex` into `main.tex`
-3. Upload `logo.png` to the project
-4. Ensure compiler is set to **pdfLaTeX** (Menu → Settings → Compiler)
-5. **Compile twice** (first pass generates TOC, second pass resolves page references)
-6. Download the PDF
-
-### Locally (Terminal)
+### Build
 
 ```bash
 pdflatex prepfusion_titans_guide.tex
@@ -316,7 +307,7 @@ The document includes **FontAwesome 5** icons for visual interest:
 
 ### Logo Not Appearing
 
-1. Check that `logo.png` is **in the same Overleaf folder** as the `.tex` file
+1. Check that `logo.png` is **in the same folder** as the `.tex` file
 2. Verify the `\includegraphics{logo.png}` line is **uncommented**
 3. Try a different image format: `.jpg`, `.pdf`, or `.eps`
 4. Ensure file is not corrupted (test in another document first)
@@ -336,7 +327,7 @@ Ensure `hyperref` is loaded **after** all color definitions. The current file lo
 
 **Cause:** You only compiled once.
 
-**Solution:** Compile twice with `pdflatex` (or click "Recompile" twice on Overleaf).
+**Solution:** Compile twice with `pdflatex`.
 
 ### Table Not Fitting on Page
 
